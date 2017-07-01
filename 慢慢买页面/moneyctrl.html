@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet/less" href="../css/moneyctrl.less"/>
+    <link rel="stylesheet/less" href="../css/common.less"/>
+    <script src="../js/jquery-3.1.0.js"></script>
+    <script src="../js/em.js"></script>
+    <script src="../js/less.js"></script>
+    <script src="../js/moneyctrl.js"></script>
+    <script src="../js/template.js"></script>
+
+
+    <title>买钱控功能页面</title>
+</head>
+<body>
+<div class="layout">
+    <div class="headLine">
+        <a href="首页功能界面.html"><</a>
+        <b>省钱控-最新优惠</b>
+        <s class="fr"><img src="images/header_app.png" alt=""/></s>
+    </div>
+    <div class="body"></div>
+    <div class="page2">
+        <ul>
+            <li><button id="prev">上一页</button></li>
+            <li>
+                <div>
+                    <i id="pg"></i><i>/</i><i>14</i><i>▽</i>
+                </div>
+            </li>
+            <li><button id="next">下一页</button></li>
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="text">
+            <span><a href="javascript:;">登录</a></span>
+            <span><a href="javascript:;">注册</a></span>
+            <span><b><img src="images/01.png" alt=""/></b><a href="javascript:;">返回底部</a></span>
+        </div>
+        <div class="foot">
+            <span>
+            <i>手机App下载</i>
+            <i>慢慢买手机版</i>
+            <i>--掌上比价平台</i>
+        </span>
+            <p>m.manmanbuy.com</p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+<script type="text/html" id="a">
+    <ul>
+        {{each result as value}}
+        <li>
+            <a href="国内折扣.html?productId={{value.productId}}">
+            {{#value.productImgSm}}
+            <div class="right fr">
+                <p>{{value.productName}}</p>
+                <i style="color:red">{{value.productPinkage}}</i>
+                <div class="bottom">
+                    <s>{{value.productFrom}}</s><s>{{value.productTime}}</s>
+                </div>
+            </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+
+
+</script>
+</html>

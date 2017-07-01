@@ -1,0 +1,33 @@
+.category > ul > li {
+  padding: 0 0.3rem;
+}
+.category > ul > li .goods {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+.category > ul > li .goods a s {
+  font: 400 0.15rem simsun;
+  transform: rotate(90deg);
+}
+.category > ul > li .goodsCategory {
+  display: inline-block;
+  width: 100%;
+}
+.category > ul > li .goodsCategory ul li {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  border: 1px solid #ddd;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.category > ul > li .goodsCategory ul li a {
+  display: block;
+}
+.category > ul > li .hidden {
+  display: none;
+}
+.category > ul > li .block {
+  display: block;
+}

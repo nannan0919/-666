@@ -1,0 +1,130 @@
+body {
+  height: 20rem;
+}
+body .headLine {
+  height: 1rem;
+  line-height: 1rem;
+  background-color: #F4483E;
+  padding-left: 0.2rem;
+}
+body .headLine > a {
+  display: inline-block;
+  font: 800 30px simsun;
+  width: 33%;
+  color: #fff;
+}
+body .headLine > b {
+  color: #fff;
+  font-size: 18px;
+}
+body .headLine s {
+  height: 1rem;
+}
+body .headLine s img {
+  width: 60%;
+  margin-top: 0.2rem;
+}
+body > p {
+  text-align: center;
+  color: #AEAEAE;
+  font-size: 0.14rem;
+  margin: 0.1rem;
+}
+body .couponList1 ul li {
+  position: relative;
+  height: 3rem;
+  border-bottom: 1px solid #eee;
+  padding: 0.2rem 0.1rem;
+}
+body .couponList1 ul li > img {
+  float: left;
+  width: 35%;
+}
+body .couponList1 ul li > p {
+  width: 62%;
+  font-size: 17px;
+  color: #353535;
+}
+body .couponList1 ul li > p i {
+  display: block;
+  margin-bottom: 0.15rem;
+}
+body .couponList1 ul li a {
+  font: 800 23px/3rem simsun;
+}
+body .couponList1 ul li s {
+  font-size: 16px;
+  position: absolute;
+  left: 35%;
+  bottom: 5%;
+}
+body #mask {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  /*��͸��*/
+  filter: alpha(opacity=40);
+  /*ie 6��͸��*/
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+body #show {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -1.5rem 0 0 -1.5rem;
+  display: none;
+  border: 1px solid red;
+}
+body #show .screen {
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+body #show .screen ul {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 3000%;
+  overflow: hidden;
+}
+body #show .screen ul li {
+  width: 2rem;
+  height: 2rem;
+  float: left;
+}
+body #show .screen ul li img {
+  width: 2rem;
+  height: 2rem;
+}
+body #show #arr span {
+  width: 0.4rem;
+  height: 0.6rem;
+  border-radius: 0.07rem;
+  position: absolute;
+  left: 0.05rem;
+  top: 50%;
+  margin-top: -0.2rem;
+  background: #000;
+  cursor: pointer;
+  line-height: 0.6rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: '����';
+  font-size: 0.3rem;
+  color: #fff;
+  opacity: 0.3;
+  border: 1px solid #fff;
+}
+body #show #arr #right {
+  right: 0.05rem;
+  left: auto;
+}

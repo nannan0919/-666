@@ -1,0 +1,55 @@
+.headLine {
+  height: 1rem;
+  line-height: 1rem;
+  background-color: #FF841D;
+  padding-left: 0.2rem;
+}
+.headLine > a {
+  display: inline-block;
+  font: 800 0.3rem simsun;
+  width: 30%;
+  color: #fff;
+}
+.headLine > b {
+  color: #fff;
+  font-size: 0.18rem;
+}
+.headLine s {
+  height: 1rem;
+}
+.headLine s img {
+  width: 60%;
+  margin-top: 0.2rem;
+}
+.body li {
+  height: 2.5rem;
+  border: 1px solid red;
+}
+.body li img {
+  float: left;
+  width: 29%;
+}
+.body li .right {
+  width: 65%;
+}
+.body li .right p {
+  display: block;
+  font-size: 0.16rem;
+}
+.body li .right .bottom {
+  margin-top: 0.15rem;
+}
+.page2 {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #fff;
+  padding-top: 0.1rem;
+}
+.page2 ul select {
+  height: 0.35rem;
+}
+.page2 ul li {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+}

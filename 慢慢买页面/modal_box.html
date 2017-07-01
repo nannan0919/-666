@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet/less" href="../css/common.less"/>
+    <!--<link rel="stylesheet/less" href="../css/.less"/>-->
+    <script src="../js/jquery-3.1.0.js"></script>
+    <script src="../js/em.js"></script>
+    <script src="../js/less.js"></script>
+    <script src="../js/couponproduct.js"></script>
+    <title></title>
+    <style>
+        
+        body {
+            height: 2000px;
+        }
+
+        .screen {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .screen ul {
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 3000%;
+            overflow: hidden;
+
+        }
+        .screen li {
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+
+        #mask {
+            width: 100%;
+            height: 100%;
+            opacity: 0.4; /*半透明*/
+            filter: alpha(opacity=40); /*ie 6半透明*/
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        #show {
+            width: 300px;
+            height: 300px;
+            padding: 50px;
+            background-color: #fff;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -150px 0 0 -150px;
+            display: none;
+            border: 1px solid red;
+        }
+
+
+        #arr span {
+            width: 40px;
+            height: 60px;
+            border-radius: 7px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background: #000;
+            cursor: pointer;
+            line-height: 60px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+        #arr #right {
+            right: 5px;
+            left: auto;
+        }
+    </style>
+</head>
+<body>
+<a href="javascript:;" id="login">点击</a>
+
+<div id="mask"></div>
+<div id="show">
+        <div class="screen">
+            <ul>
+
+            </ul>
+        </div>
+        <div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>
+    </div>
+<script>
+
+    var login = document.getElementById("login");
+    var mask = document.getElementById("mask");
+    var show = document.getElementById("show");
+    login.onclick=function(event){
+        mask.style.display="block";
+        show.style.display="block";
+        var event=event||window.event;
+        if(event.stopPropagation){
+            event.stopPropagation();
+        };
+    }
+//    document.onclick=function(){
+//        mask.style.display = "none";
+//        show.style.display = "none";
+//    }
+
+
+    var box = document.getElementById("show");
+    var screen = box.children[0];
+    var ul = screen.children[0];
+    var ulLis = ul.children;
+    var arr = document.getElementById("arr");
+    var left = document.getElementById("left");
+    var right = document.getElementById("right");
+//    imgWidth = $('.screen').width();
+
+    //5.点击箭头
+    var index = 0;
+    var imgWidth;
+    right.onclick = function () {
+        imgWidth = screen.offsetWidth;
+        console.log(imgWidth);
+
+        if (index === ulLis.length -1) {
+            ul.style.left = 0+ "px"
+           alert('已经到最后一页了');
+            index=-1;
+        }else{
+            index++;
+            console.log(index);
+            console.log(ul);
+            var a = index * -imgWidth;
+            $(ul).attr('style','left:'+a+'px');
+//            ul.css('left','100px');
+//            ul.style.left= index * -imgWidth+"px";
+        }
+
+    }
+    left.onclick = function () {
+        imgWidth = screen.offsetWidth;
+        console.log(123);
+        if (index === 0) {
+            ul.style.left= 0+"px";
+            alert('已经到当前第一页');
+
+        }else{
+            index--;
+            ul.style.left= -index * imgWidth+"px";
+        }
+
+    }
+</script>
+</body>
+</html>

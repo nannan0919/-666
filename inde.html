@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>滑动效果</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <!--先些样式-->
+    <style>
+    .nav_wrap{
+        width:100%;
+        height: 40px;
+        background: pink;
+        overflow: hidden;
+    }
+    .nav_ul{
+        width:160%;
+        height: 40px;
+    }
+    .nav_ul li{
+        float: left;
+        padding: 10px;
+    }
+    </style>
+</head>
+<body>
+<!--写dom-->
+<div class="nav_wrap">
+    <ul class="nav_ul">
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+    </ul>
+</div>
+</body>
+<!--写script-->
+<script src="../lib/jquery.js"></script>
+<script>
+    //获取元素
+    var ul = $('.nav_ul');
+    var maxWidth = ul.width()- ul.parent().width();
+    //设置变量
+    var startJuli=0,endJuli=0,moveJuli=0,lastPos=0;
+    //设置事件
+    ul.on('touchstart',function(e){
+        startJuli = e.originalEvent.touches[0].clientX;
+    })
+    ul.on('touchmove',function(e){
+        endJuli = e.originalEvent.touches[0].clientX;
+        moveJuli = endJuli - startJuli;
+        moveUl(lastPos+moveJuli,0);
+    })
+    ul.on('touchend',function(e){
+        lastPos += moveJuli;
+        if(lastPos<-maxWidth){
+            moveUl(-maxWidth,1);
+            lastPos = -maxWidth;
+        }
+        if(lastPos>0){
+            moveUl(0,1);
+            lastPos = 0;
+        }
+    })
+
+    //写一个滑动功能
+    function moveUl(len,sec){
+        ul.css('transform','translate('+len+'px)');
+        ul.css('transition',"all "+sec+"s");
+    }
+</script>
+</html>

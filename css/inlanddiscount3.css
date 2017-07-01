@@ -1,0 +1,66 @@
+.layout .headLine {
+  height: 1rem;
+  line-height: 1rem;
+  background-color: #FF841D;
+  padding-left: 0.2rem;
+}
+.layout .headLine > a {
+  display: inline-block;
+  font: 800 30px simsun;
+  width: 37%;
+  color: #fff;
+}
+.layout .headLine > b {
+  color: #fff;
+  font-size: 18px;
+}
+.layout .headLine s {
+  height: 1rem;
+}
+.layout .headLine s img {
+  width: 60%;
+  margin-top: 0.2rem;
+}
+.layout .content {
+  background-color: #fff;
+}
+.layout .content li p {
+  font-size: 0.16rem;
+  color: #646464;
+}
+.layout .content li h4 {
+  font-size: 0.3rem;
+  color: #666377;
+}
+.layout .content li i {
+  font-size: 14px;
+  margin: 0.7rem  0.1rem;
+  color: #A8A8A8;
+}
+.layout .content li > div > p {
+  float: left;
+  display: block;
+  width: 60%;
+}
+.layout .content li > div > img {
+  width: 40%;
+  float: right;
+}
+.layout .content li img {
+  margin-top: 0.15rem;
+  width: 80%;
+}
+.layout button {
+  background-color: #FF9000;
+  width: 90%;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  border: none;
+  color: #fff;
+  margin: 0.25rem;
+  border-radius: 5px;
+}
+.layout > img {
+  width: 92%;
+  margin: 0.2rem;
+}

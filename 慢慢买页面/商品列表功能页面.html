@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet/less" href="../css/common.less"/>
+    <link rel="stylesheet/less" href="../css/index2.less"/>
+    <script src="../js/jquery-3.1.0.js"></script>
+    <script src="../js/em.js"></script>
+    <script src="../js/less.js"></script>
+    <script src="../js/商品列表功能.js"></script>
+
+
+    <title>商品列表功能页面</title>
+</head>
+<body>
+<div class="layout">
+    <!-- 顶部通栏-->
+    <div class="header">
+        <img src="images/header_logo.png" alt=""/>
+        <img src="images/header_app.png" alt=""/>
+    </div>
+    <!-- 搜索框-->
+    <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品" class="text"/>
+
+        <input type="button" value="搜索"/>
+    </div>
+    <!--商品分类页面-->
+   <div class="goodsList clearfix">
+       <div class="fl">
+           <a href="首页功能界面.html">首页 <s> > </s></a>
+           <a href="category.html?titleName=' + element.category + '&&titleId=' + element.categoryId">全部分类<s> > </s></a>
+           <a href="javascript:;"id="Tv"></a><s> > </s>
+       </div>
+       <button class="fr">筛选</button>
+   </div>
+    <div class="goods">
+        <ul>
+
+        </ul>
+    </div>
+    <div class="page clearfix">
+        <ul>
+            <li><button id="prev">上一页</button></li>
+            <li>
+                <div><i id="pg"></i><i>/</i><i>3</i><i>▽</i></div>
+            </li>
+            <li><button id="next">下一页</button></li>
+        </ul>
+    </div>
+    <!-- 底部开始-->
+    <div class="footer">
+        <div class="blank"></div>
+        <div class="text">
+            <span><a href="javascript:;">登录</a></span>
+            <span><a href="javascript:;">注册</a></span>
+            <span><b><img src="images/01.png" alt=""/></b><a href="javascript:;">返回底部</a></span>
+        </div>
+        <div class="foot">
+            <span>
+            <i>手机App下载</i>
+            <i>慢慢买手机版</i>
+            <i>--掌上比价平台</i>
+        </span>
+            <p>m.manmanbuy.com</p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+.headLine {
+  height: 1rem;
+  line-height: 1rem;
+  background-color: #F4483E;
+  padding-left: 0.2rem;
+}
+.headLine > a {
+  display: inline-block;
+  font: 800 0.3rem simsun;
+  width: 37%;
+  color: #fff;
+}
+.headLine > b {
+  color: #fff;
+  font-size: 0.15rem;
+}
+.headLine s {
+  height: 1rem;
+}
+.headLine s img {
+  width: 60%;
+  margin-top: 0.2rem;
+}
+.couponList li {
+  width: 30%;
+  float: left;
+  border: 1px solid #ddd;
+  margin: 0.3rem 0.1rem;
+  padding: 0.1rem;
+}
+.couponList li a {
+  text-align: center;
+}
+.couponList li a img {
+  width: 70%;
+  margin: 0.3rem;
+}
+.menu {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  background-color: #F4F4F4;
+}
+.menu span {
+  font-size: 0.14rem;
+}
